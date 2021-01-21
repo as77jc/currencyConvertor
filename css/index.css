@@ -4,15 +4,26 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 700px;
+	max-width: 750px;
+    height: 100vh;
     margin: 0 auto;
     padding: 0;
 	font-family: 'Josefin' , sans-serif;
 	text-align: center;
-	background: #feeafa;
-	color: #1d3557;
+    background-image: linear-gradient(to bottom, #081c15, #1b4332),
+                       url('https://www.praxity.com/media/1615/multi-currency-accounting.jpg');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+	color: #f48c06;
 	font-size: 20px;
 	
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    
 }
 
 input, select {
@@ -27,16 +38,20 @@ input, select {
 	padding-left: 15px;
 }
 
+input {
+    width: 100px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   	-webkit-appearance: none;
 }
 
-select {
-	width: 100px;
-	padding-left: 10px;
-}
-
 i, p {
 	font-size: 30px;
+}
+
+select {
+	width: 100px;
+	padding-left: 0px;
 }
