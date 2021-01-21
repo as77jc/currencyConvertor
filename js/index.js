@@ -24,11 +24,11 @@ async function getRate() {
     const data = await fetch(apiUrl);
     const currencyRate = await data.json();
     
-    curencyArray = Object.keys(currencyRate.rates)
-    curencyArray.unshift('EUR')
+    curencyArray = Object.keys(currencyRate.rates);
+    curencyArray.unshift('EUR');
     
-    rate = Object.values(currencyRate.rates)
-    rate.unshift(1)
+    rate = Object.values(currencyRate.rates);
+    rate.unshift(1);
     
     curencyArray.forEach(cur => {
         html += `<option value="${cur}">${cur} ${flag[curencyArray.indexOf(cur)]}</option>`
@@ -42,12 +42,12 @@ async function getRate() {
 
     exchangeFromList.innerHTML = html;
     exchangeToList.innerHTML = html;
-    exchangeToList.value = 'CAD'
+    exchangeToList.value = 'CAD';
     
-    update()      
+    update();
 }
 
-getRate()
+getRate();
 
 ///////////////////////////////////////////////////////////////////////
 /// Update Output 
@@ -75,10 +75,10 @@ exchangeToList.addEventListener('change', e => {
     currentTo = '';
     
     indexTo = curencyArray.indexOf(exchangeToList.value);
-    currentTo = curencyArray[indexTo]
+    currentTo = curencyArray[indexTo];
     
     
-    update()  
+    update();
 })
 
 ///////////////////////////////////////////////////////////////////////
@@ -89,9 +89,9 @@ exchangeFromList.addEventListener('change', e => {
     currentFrom = '';
     
     indexFrom = curencyArray.indexOf(exchangeFromList.value);
-    currentFrom = curencyArray[indexFrom]
+    currentFrom = curencyArray[indexFrom];
     
-    update()
+    update();
 })
 
 ///////////////////////////////////////////////////////////////////////
@@ -100,6 +100,6 @@ exchangeFromList.addEventListener('change', e => {
 
 inputAmount.addEventListener('keyup', e =>{
     
-    update()
+    update();
     
 })
